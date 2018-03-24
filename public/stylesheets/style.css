@@ -1,0 +1,296 @@
+html {
+	height: 100%;
+	background: #efefef;
+	padding-bottom: 60px;
+	position: relative;
+}
+
+body {
+	font: 14px "PT Sans", Helvetica, Arial, sans-serif;
+	margin: 0px;
+}
+
+/* Text
+---------------------------------------------*/
+
+a {
+  color: #00B7FF;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0px;
+	font-weight: 700;
+}
+
+/* Utility
+---------------------------------------------*/
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.container {
+	width: 96%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/* Layout
+---------------------------------------------*/
+
+.one-third {
+	width: 24%;
+	float: left;
+	margin-right: 1%;
+}
+
+.two-thirds {
+	width: 74%;
+	float: right;
+	margin-left: 1%;
+}
+
+.widget {
+	width: 100%;
+	padding: 40px;
+	margin: 0 0 20px 0;
+	box-sizing: border-box;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header
+---------------------------------------------*/
+
+#header {
+	width: 100%;
+	padding: 20px 0 20px 0;
+	margin-bottom: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+	font-size: 18px;
+}
+
+#header p {
+	margin: 0;
+	color: #828282;
+}
+
+/* Forecast Chart
+---------------------------------------------*/
+
+.day {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.day:last-of-type {
+	margin: 0px;
+}
+
+.time-block {
+	display: block;
+	position: relative;
+	float: left;
+	height: 100%;
+	width: 4.166667%;
+	text-align: center;
+}
+
+.time-block:first-of-type {
+	border-radius: 15px 0 0 15px;
+}
+
+.time-block:last-of-type {
+	border-radius: 0 15px 15px 0;	
+}
+
+.time-block div {
+	height: 0;
+	width: 0;
+	opacity: 0;
+	position: relative;
+	overflow: visible;
+}
+
+.time-block div::after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: -8px;
+	left: 36px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #281053;
+}
+
+.time-block:hover > div {
+	opacity: 1;
+	height: 40px;
+	width: 80px;
+	position: absolute;
+	top: -55px;
+	left: -28px;
+	background-color: #281053;
+	border-radius: 3px;
+}
+
+.time-block div p {
+	padding: 0;
+	font-size: 12px;
+	color: #fff;
+}
+
+.time-block div .icon {
+	height: 100%;
+	float: left;
+}
+
+svg path {
+	fill: #fff;
+}
+
+.rideable {
+	background-color: #64f7a6;
+}
+
+.unrideable {
+	background-color: #ccc7c7;
+}
+
+.empty {
+	background-color: #efefef;
+}
+
+.unknown {
+	background-color: #eee;
+}
+
+.day-name {
+	width: 10%;
+	float: left;
+}
+
+.hours {
+	height: 100%;
+	width: 90%;
+	float: left;
+	border-radius: 5px;
+	overflow: visible;
+}
+
+.hourly-labels-container {
+	width: 90%;
+	margin-left: 5.8333%;
+	padding-bottom: 10px;
+}
+
+.hourly-label {
+	width: 8.333333%;
+	display: inline-block;
+	text-align: center;
+}
+
+.hourly-ticks-container {
+	width: 90%;
+	margin-left: 10%;
+}
+
+.hourly-tick {
+	border-left: 1px solid #ccc;
+    height: 10px;
+    width: 4.166667%;
+    display: inline-block;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.hourly-tick:last-of-type {
+	margin-right: 0;
+}
+
+/* Address Bar
+---------------------------------------------*/
+
+.address input:focus {
+	outline: none;
+}
+
+.address input[type="text"] {
+	width: 70%;
+	padding: 10px;
+	height: 30px;
+	border-radius: 30px 0 0 30px;
+	border: 1px solid #dedede;
+	box-sizing: border-box;
+}
+
+.address input[type="submit"] {
+	width: 30%;
+	height: 30px;
+	border-radius: 0 30px 30px 0;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color: #ccc;
+}
+
+/* Controls
+---------------------------------------------*/
+
+.condition-control,
+.temp-control {
+	display: block;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.temp-control:last-of-type {
+	height: auto;
+	margin-bottom: 0px;
+}
+
+.condition-control label,
+.temp-control label {
+	display: inline-block;
+	width: 40px;
+	text-transform: capitalize;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+/* Media Queries
+---------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+	.one-third,
+	.two-thirds {
+		width: 100%;
+	}
+}
